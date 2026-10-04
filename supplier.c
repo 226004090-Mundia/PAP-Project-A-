@@ -5,8 +5,52 @@
 Supplier suppliers[MAX_SUPPLIERS];
 int supplierCount = 0;
 
+void supplierMenu()
+{
+    int choice;
+
+    do
+    {
+        printf("\n--- Supplier Management ---\n");
+        printf("1. Add Supplier\n");
+        printf("2. Display Suppliers\n");
+        printf("3. Search Supplier\n");
+        printf("4. Back\n");
+
+        printf("\nEnter your choice: ");
+        scanf("%d", &choice);
+
+        if (choice == 1)
+        {
+            addSupplier();
+        }
+        else if (choice == 2)
+        {
+            displaySuppliers();
+        }
+        else if (choice == 3)
+        {
+            searchSupplier();
+        }
+        else if (choice == 4)
+        {
+            printf("\nReturning to main menu...\n");
+        }
+        else
+        {
+            printf("\nInvalid choice.\n");
+        }
+
+    } while (choice != 4);
+}
+
 void addSupplier()
 {
+    if (supplierCount >= MAX_SUPPLIERS)
+{
+    printf("Supplier list is full.\n");
+    return;
+}
     printf("\nAdd Supplier\n");
 
     printf("Enter Supplier ID: ");
