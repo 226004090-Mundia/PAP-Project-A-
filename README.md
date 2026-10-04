@@ -6,7 +6,7 @@
 3. Joseph Amwaalwa
 4. Lovis Ashivudhi
 5. Elma De Celestino
-6. 
+6. Mervin Hukununa
 
 ## Description
 A menu-driven C program for managing municipal
@@ -34,6 +34,6 @@ gcc main.c employee.c budget.c supplier.c asset.c reports.c -o mfms
 - Christine Hambinga - Budget Management
 - Joseph Amwaalwa - Supplier Management
 - Lovis Ashivudhi - Asset Management
-- Member 5 - Reports
+- Mervin Hukununa - Reports
 - Elma De Celestino - Integration/Validation
 - 
