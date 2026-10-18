@@ -1,110 +1,86 @@
 #include <stdio.h>
 #include <string.h>
+#include "employees.h"
+
+struct Employee employees[100];
+int employeeCount = 0;
 
 void Displaymenu()
 {
+    int choice;
+    
+    do {
+        printf("\n==============================================\n");
+        printf("MUNICIPAL FINANCIAL MANAGEMENT SYSTEM - EMPLOYEES\n");
+        printf("==============================================\n");
+        printf("1. Add Employee\n");
+        printf("2. Display Employees\n");
+        printf("3. Back to Main Menu\n");
+        printf("Select choice: ");
+        scanf("%d", &choice);
 
-printf("\n");
-printf("=============================================");
-printf("\nMUNICIPAL FINANCIAL MANAGEMENT SYSTEM\n");
-printf("==============================================");
+        if (choice == 1) {
+            if (employeeCount >= 100) {
+                printf("Employee limit reached!\n");
+                continue;
+            }
 
-printf("1.Employee Management\n");
-printf("2.Budget Management\n");
-printf("3.Supplier Management\n");
-printf("4.Asset Management\n");
-printf("5.Reports\n");
-printf("6.Exit\n");
+            printf("Enter Employee ID: ");
+            scanf("%d", &employees[employeeCount].ID);
+
+            printf("Enter Employee Name: ");
+            scanf(" %[^\n]", employees[employeeCount].name);
+
+            printf("Enter Department: ");
+            scanf(" %[^\n]", employees[employeeCount].departement);
+
+            printf("Enter Email: ");
+            scanf("%s", employees[employeeCount].email);
+
+            printf("Enter Phone Number: ");
+            scanf("%s", employees[employeeCount].phoneNumber);
+
+            printf("Enter Town: ");
+            scanf(" %[^\n]", employees[employeeCount].Town);
+
+            printf("Enter Basic Salary: ");
+            scanf("%f", &employees[employeeCount].BasicSalary);
+
+            printf("Enter Housing Allowance: ");
+            scanf("%f", &employees[employeeCount].houseAllowance);
+
+            printf("Enter Transport Allowance: ");
+            scanf("%f", &employees[employeeCount].transportAllowance);
+
+            employeeCount++;
+            printf("Employee added successfully!\n");
+        }
+        else if (choice == 2) {
+            if (employeeCount == 0) {
+                printf("\nNo employees recorded yet.\n");
+            } else {
+                printf("\n--- EMPLOYEE LIST ---\n");
+                for (int i = 0; i < employeeCount; i++) {
+                    float gross = employees[i].BasicSalary + employees[i].houseAllowance + employees[i].transportAllowance;
+                    printf("\nEmployee %d:\n", i + 1);
+                    printf(" ID: %d\n", employees[i].ID);
+                    printf(" Name: %s\n", employees[i].name);
+                    printf(" Department: %s\n", employees[i].departement);
+                    printf(" Gross Salary: N$%.2f\n", gross);
+                }
+            }
+        }
+        else if (choice == 3) {
+            printf("Returning to main menu...\n");
+        }
+        else {
+            printf("Invalid choice. Please choose between 1 and 3.\n");
+        }
+
+    } while (choice != 3);
 }
 
 float calculateSalary(float BasicSalary, float houseAllowance, float transportAllowance)
 {
    return BasicSalary + houseAllowance + transportAllowance;
-}
-
-int main(){
-
-char name[40];
-int age;
-int ID[100];
-char departement[100];
-float BasicSalary;
-float houseAllowance;
-float transportAllowance;
-float salary;
-char Town[30];
-char email[50];
-char phoneNumber[20];
-int choice;
-
-Displaymenu();
-
-     printf("Select choice:");
-     scanf("%d", &choice);
-
-     if(choice > 6){
-        printf("Invalid choice");
-     }else{
-        printf("Error");
-     }
-
-        switch(choice){
-
-case 1:
-     printf("\nEmployee Management:\n");
-
-     printf("Enter Employee name:");
-     fgets(name, sizeof(name), stdin);
-
-     printf("Enter age:");
-     scanf("%d", &age);
-
-     printf("Enter Employee ID:");
-     scanf("%d", &ID);
-
-     printf("Enter phone number:");
-     fgets(phoneNumber, sizeof(phoneNumber), stdin);
-
-      printf("Input Departement:");
-      fgets(departement, sizeof(departement), stdin);
-
-      printf("Enter email:");
-      fgets(email, sizeof(email), stdin);
-
-      printf("Town:");
-      fgets(Town, sizeof(Town), stdin);
-
-      printf("Input Basicsalary:");
-      scanf("%.2f", &BasicSalary);
-
-      printf("Input housing allowance:");
-      scanf("%.2f", &houseAllowance);
-
-      printf("Input transport allowance:");
-      scanf("%.2f", &transportAllowance);
-
-     printf("%s", name[40]);
-     printf("%d", age);
-     printf("%d", ID);
-     printf("%s", departement[100]);
-     printf("%s", email[50]);
-     printf("%s", phoneNumber[20]);
-     printf("%s", Town[30]);
-     printf("%.2f", salary);
-     printf("N$%.2f", houseAllowance);
-     printf("N$%.2f", transportAllowance);
-     printf("Gross Salary:N$%.2f", salary);
-
-int searchID(int ID, int IDs[100], int size){
-         for(int i=0; i< size; i++){
-           if(IDs[i]==ID){
-         return i; }
-}
-  return -1;
-        }
-     printf("Enter ID:");
-     scanf("%d", &ID);
-     printf("%d", searchID);
-   }
-
 }
