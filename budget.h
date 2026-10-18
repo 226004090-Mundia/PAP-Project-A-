@@ -1,6 +1,6 @@
 #define BUDGET_H
 
-struct of budget {
+struct budget {
     char budgetDept[20][30];
     double budgetAllowed[20];
     double budgetSpent[20];
@@ -12,4 +12,4 @@ struct of budget {
     void displayDepartment();
     void displayExceededDepartment();
     double remaining();
-}
+
