@@ -4,7 +4,7 @@ struct Asset {
 int id;
 char name[50];
 char type[30];
-char value;
+float value;
 char condition[30];
 char department[50];
 };
