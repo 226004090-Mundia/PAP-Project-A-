@@ -2,7 +2,7 @@
 #include <string.h>
 #include "suppliers.h"
 
-Supplier suppliers[MAX_SUPPLIERS];
+struct supplier suppliers[MAX_SUPPLIERS];
 int supplierCount = 0;
 
 void supplierMenu()
