@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include "employee.h"
+#include "employees.h"
 #include "budget.h"
-#include "supplier.h"
-#include "asset.h"
+#include "suppliers.h"
+#include "assets.h"
 
 
 int main()
@@ -11,11 +11,12 @@ int main()
 
     do
     {
-        printf("\n--- Municipal Financial Management System ---\n");
+        printf("\nMunicipal Financial Management System\n");
         printf("1. Employee Management\n");
         printf("2. Budget Management\n");
         printf("3. Supplier Management\n");
         printf("4. Asset Management\n");
+        printf("5. Reports\n");
         printf("6. Exit\n");
 
         printf("\nEnter your choice: ");
@@ -36,6 +37,10 @@ int main()
         else if (choice == 4)
         {
             assetMenu();
+        }
+        else if (choice == 5)
+        {
+            displayReportsMenu();
         }
         else if (choice == 6)
         {
