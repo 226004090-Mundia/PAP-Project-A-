@@ -7,7 +7,7 @@ void Displaymenu()
 printf("\n");
 printf("=============================================");
 printf("\nMUNICIPAL FINANCIAL MANAGEMENT SYSTEM\n");
-print("==============================================");
+printf("==============================================");
 
 printf("1.Employee Management\n");
 printf("2.Budget Management\n");
