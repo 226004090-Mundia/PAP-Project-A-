@@ -2,7 +2,7 @@
 #include <string.h>
 
 void assetMenu(){
-    printf("\n==========ASSETS MANAGEMENT==============\n
+    printf("\n==========ASSETS MANAGEMENT==============\n");
     printf("1. Add Asset\n");
     printf("2. Display Assets\n");
     printf("3. Exit\n");
