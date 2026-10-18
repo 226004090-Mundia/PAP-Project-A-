@@ -29,7 +29,7 @@ gcc main.c employees.c budget.c suppliers.c assets.c reports.c -o mfms
 
 ## How to Run
 
-./mfms
+./mfms.exe
 
 ## Member Responsibilities
 - Shalom Mundia - Employee Management
