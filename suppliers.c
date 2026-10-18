@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "supplier.h"
+#include "suppliers.h"
 
 Supplier suppliers[MAX_SUPPLIERS];
 int supplierCount = 0;
