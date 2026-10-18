@@ -1,5 +1,9 @@
 # Municipal Financial Management System (MFMS)
 
+## Group Details
+* **Group Number:** 16
+* **Course Code:** PAP521S
+
 ## Group Members
 1. Shalom Mundia
 2. Christine Hambinga 
@@ -9,8 +13,7 @@
 6. Mervin Hukununa
 
 ## Description
-A menu-driven C program for managing municipal
-employees, budgets, suppliers, assets and reports.
+A menu-driven C program for managing municipal employees, budgets, suppliers, assets, and reports.
 
 ## Features
 - Employee Management
@@ -22,8 +25,7 @@ employees, budgets, suppliers, assets and reports.
 - Input validation
 
 ## How to Compile
-
-gcc main.c employee.c budget.c supplier.c asset.c reports.c -o mfms
+gcc main.c employees.c budget.c suppliers.c assets.c reports.c -o mfms
 
 ## How to Run
 
