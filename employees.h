@@ -1,7 +1,7 @@
 struct Employee {
      char name[40];
      int age;
-     int ID[100];
+     int ID;
      char departement[100];
      float BasicSalary;
      float houseAllowance;
