@@ -5,11 +5,11 @@
 * **Course Code:** PAP521S
 
 ## Group Members
-1. Shalom Mundia
-2. Christine Hambinga 
+1. Shalom Mundia - 226004090
+2. Christine Hambinga - 226043185
 3. Joseph Amwaalwa - 226122298
-4. Lovis Ashivudhi
-5. Elma De Celestino
+4. Lovis Ashivudhi - 226066789
+5. Elma De Celestino - 226035565
 6. Mervin Hukununa
 
 ## Description
