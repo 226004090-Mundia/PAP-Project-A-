@@ -10,7 +10,7 @@
 3. Joseph Amwaalwa - 226122298
 4. Lovis Ashivudhi - 226066789
 5. Elma De Celestino - 226035565
-6. Mervin Hukununa
+6. Mervin Hukununa - 225072068
 
 ## Description
 A menu-driven C program for managing municipal employees, budgets, suppliers, assets, and reports.
