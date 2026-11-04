@@ -5,7 +5,7 @@
 
 #define LINE_BUF 128
 
-/* ---------- Validation helper declarations ---------- */
+
 void   readLine(const char *prompt, char *buf, int size);
 void   readNonEmpty(const char *prompt, char *buf, int size);
 int    readInt(const char *prompt, int min, int max);
@@ -15,19 +15,17 @@ void   printLine(char c, int n);
 int    equalsIgnoreCase(const char *a, const char *b);
 int    containsIgnoreCase(const char *haystack, const char *needle);
 
-/* ---------- Integration: module menus written by teammates ---------- */
-void employeeMenu(void);   /* Student 1 */
-void budgetMenu(void);     /* Student 2 */
-void supplierMenu(void);   /* Student 3 */
-void assetMenu(void);      /* Student 4 */
-void reportsMenu(void);    /* Student 5 */
+void employeeMenu(void);   
+void budgetMenu(void);     
+void supplierMenu(void);   
+void assetMenu(void);      
+void reportsMenu(void);    
 
-/* ---------- Main program functions ---------- */
+
 void displayMenu(void);
 
-/* ============================================================
-   MAIN
-   ============================================================ */
+
+
 int main(void)
 {
     int running = 1;
@@ -59,10 +57,7 @@ void displayMenu(void)
            "6. Exit\n");
 }
 
-/* ============================================================
-   VALIDATION FUNCTIONS
-   ============================================================ */
-/* Reads one line safely (no buffer overflow) and removes the newline */
+
 void readLine(const char *prompt, char *buf, int size)
 {
     printf("%s", prompt);
@@ -73,13 +68,13 @@ void readLine(const char *prompt, char *buf, int size)
     size_t len = strlen(buf);
     if (len > 0 && buf[len - 1] == '\n') {
         buf[len - 1] = '\0';
-    } else {                                   /* discard overly long input */
+    } else {                                  
         int c;
         while ((c = getchar()) != '\n' && c != EOF) { }
     }
 }
 
-/* Removes spaces at the start and end of a string */
+
 static void trim(char *s)
 {
     size_t start = 0, len = strlen(s);
@@ -89,7 +84,7 @@ static void trim(char *s)
     while (len > 0 && isspace((unsigned char)s[len - 1])) s[--len] = '\0';
 }
 
-/* Keeps asking until the user types something (empty names rejected) */
+
 void readNonEmpty(const char *prompt, char *buf, int size)
 {
     for (;;) {
@@ -100,7 +95,7 @@ void readNonEmpty(const char *prompt, char *buf, int size)
     }
 }
 
-/* Integer between min and max; rejects letters, empty and out-of-range */
+
 int readInt(const char *prompt, int min, int max)
 {
     char line[LINE_BUF], *end;
@@ -115,7 +110,7 @@ int readInt(const char *prompt, int min, int max)
     }
 }
 
-/* Decimal number not less than min (use 0 to block negatives) */
+
 double readDouble(const char *prompt, double min)
 {
     char line[LINE_BUF], *end;
@@ -142,7 +137,7 @@ void printLine(char c, int n)
     putchar('\n');
 }
 
-/* Case-insensitive comparison of two strings (uses strlen + tolower) */
+
 int equalsIgnoreCase(const char *a, const char *b)
 {
     if (strlen(a) != strlen(b)) return 0;
@@ -151,7 +146,7 @@ int equalsIgnoreCase(const char *a, const char *b)
     return 1;
 }
 
-/* 1 if needle appears anywhere inside haystack, ignoring case */
+
 int containsIgnoreCase(const char *haystack, const char *needle)
 {
     size_t hl = strlen(haystack), nl = strlen(needle);
@@ -165,10 +160,7 @@ int containsIgnoreCase(const char *haystack, const char *needle)
     return 0;
 }
 
-/* ============================================================
-   TEMPORARY PLACEHOLDERS - so this file runs on its own.
-   When teammates' modules are added, DELETE everything below.
-   ============================================================ */
+
 void employeeMenu(void) { printf("\n[Employee module not connected yet]\n"); }
 void budgetMenu(void)   { printf("\n[Budget module not connected yet]\n"); }
 void supplierMenu(void) { printf("\n[Supplier module not connected yet]\n"); }
